@@ -161,7 +161,7 @@ document.getElementById("mySubmit").onclick = function () {
 
 
 Counter program
-*/
+
 
 const decreaseBtn = document.getElementById("decreaseBtn");
 const resetBtn = document.getElementById("resetBtn");
@@ -181,3 +181,32 @@ resetBtn.onclick = function () {
   count = 0;
   countLabel.textContent = count;
 };
+
+
+
+Math = built-in object that provides a collection of properties and methods
+
+let x = 3;
+let y = 2;
+let z = 1;
+
+
+z=math.round(x); // ümardab lähima täisarvuni
+z=Math.floor(x); // alati allapoole
+z=Math.ceil(x); // alati ülespoole
+z=Math.trunc(x); // võtab ära komakohad
+z=Math.pow(x,y); // x astmel y
+z=Math.sqrt(x); // ruutjuur
+z=math.log(x); // naturaallogaritm
+z=math.sin(x); // siinuse väärtus
+z=math.cos(x); // koosinuse väärtus
+z=math.tan(x); // tangensi väärtus
+z=math.max(x,y,z); // suurem väärtus
+z=math.min(x,y,z); // väiksem väärtus
+z=math.sign(x); // annab teada, kas arv on positiivne, negatiivne või null (1, -1, 0)
+
+console.log(z);
+
+
+RANDOM NUMBER GENERATOR
+*/
