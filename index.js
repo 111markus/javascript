@@ -113,11 +113,12 @@ document.getElementById("mySubmit").onclick = function () {
 
 /* Kuidas teisendada stringi numbriks? (stringid, numbrid, booleanid)
 
+let a = window.prompt("a = ?");
+let b = window.prompt("b = ?");
 
-let age = window.prompt("How old are you?");
-age = Number(age) + 1;
+sum = Number(a) + Number(b);
 
-console.log(age);
+window.alert("The sum is: " + sum);
 
 
 
@@ -208,5 +209,31 @@ z=math.sign(x); // annab teada, kas arv on positiivne, negatiivne või null (1, 
 console.log(z);
 
 
-RANDOM NUMBER GENERATOR
+
+
+
+
+
+    Exercise: Addition Calculator
+
+
+let a = window.prompt("a = ?");
+let b = window.prompt("b = ?");
+
+sum = Number(a) + Number(b);
+
+window.alert("The sum is: " + sum);
+
+
+
+    Exercise: Simple Swapping
+
+
+var a = 10;
+var b = 20;
+
+[a, b] = [b, a];
+
+console.log("a =", a, "b =", b);
+
 */
