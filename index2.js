@@ -293,7 +293,7 @@ if (!isSunny){
 }
 else{
     console.log("It is sunny");
-}*/
+}
 
 //    = assignment operator
 //   == comparison operator ( compare if values are equal)
@@ -308,3 +308,62 @@ if (PI !== "3.14") {
 } else {
   console.log("That is Pi");
 }
+*/
+
+/*
+    VANUSE ANALÜÜS
+
+function kontrolliVanust() {
+  let vanus = window.prompt("");
+  vanus = Number(vanus);
+
+  if (isNaN(vanus)) {
+    window.alert("Sisend pole korrektne, sisestage number uuesti");
+    kontrolliVanust();
+    return;
+  }
+
+  if (vanus >= 0 && vanus <= 6) {
+    window.alert("Sa oled liiga noor");
+  } else if (vanus >= 7 && vanus <= 16) {
+    window.alert("Sa oled põhikooli õpilane ja sööd kell 10");
+  } else if (vanus >= 17 && vanus <= 20) {
+    window.alert("Sa oled gümnaasiumi õpilane ja sööd kell 11");
+  } else if (vanus >= 20 && vanus <= 125) {
+    window.alert("Sa oled täiskasvanu ja sööd kell 12");
+  } else {
+    window.alert("Sisesta õige vanus");
+  }
+}
+
+kontrolliVanust();
+
+
+            RUDIMENTARY CALCULATOR
+
+let x = window.prompt("x = ?");
+let y = window.prompt("y = ?");
+let operation = window.prompt("operation = ?");
+let result;
+
+x = Number(x);
+y = Number(y);
+
+if (operation === "a") {
+  result = x + y;
+} else if (operation === "s") {
+  result = x - y;
+} else if (operation === "m") {
+  result = x * y;
+} else if (operation === "d") {
+  result = x / y;
+} else if (operation === "e") {
+  result = x ** y;
+} else if (operation === "r") {
+  result = x % y;
+} else {
+  window.alert("Unknown operation");
+}
+
+window.alert(result);
+*/
