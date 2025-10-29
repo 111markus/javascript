@@ -366,4 +366,132 @@ if (operation === "a") {
 }
 
 window.alert(result);
+
+
+          // while loop = repeat some code WHILE condition is true
+
+let username = "";
+
+while (username === "" || username === null) {
+  username = window.prompt(`Enter your name`);
+}
+console.log(`Hello ${username}`);
+
+
+
+let loggedIn = false;
+let username;
+let password;
+
+while (!loggedIn) {
+  username = window.prompt(`Enter your username`);
+  password = window.prompt(`Enter your password`);
+
+  if (username === "myUsername" && password === "myPassword") {
+    loggedIn = true;
+    console.log("You are logged in!");
+  } else {
+    console.log("Invalid credentials! Please try again");
+  }
+}
+while (!loggedIn);
+
+        // for loop = repeat some code a LIMITED amount of times
+
+for (let i = 10; i > 0; i--) {
+  // ++ liidab 1 ja -- lahutab 1, += ei korda
+  console.log(i);
+}
+
+console.log("Happy new year!");
+
+for (let i = 1; i <= 20; i++) {
+  if (i == 13) {
+    continue; // continue jätab vahele ja break lõpetab
+  } else {
+    console.log(i);
+  }
+}
+
+        // NUMBER GUESSING GAME
+
+
+const minNum = 1;
+const maxNum = 100;
+const answer = Math.floor(Math.random() * (maxNum - minNum) + minNum);
+
+console.log(answer);
+
+
+        // FUNCTION - a section of a reusable code
+        // declare code once, use it whenever you want
+        // Call the function to execute that code.
+
+
+function happyBirthday(username, age) {
+  console.log("Happy birthday to you!");
+  console.log("Happy birthday to you!");
+  console.log("Happy birthday to you!");
+  console.log(`Happy birthday dear ${username}!`);
+  console.log("Happy birthday to you!");
+  console.log(`You are ${age} years old`);
+}
+happyBirthday("brocode", 25); // et õige järjekord oleks functionil
+happyBirthday("Spongebob", 30);
+happyBirthday("Patrick", 37);
+
+
+function add(x, y) {
+  return x + y;
+}
+function subtract(x, y) {
+  return x - y;
+}
+function multiply(x, y) {
+  return x * y;
+}
+function divide(x, y) {
+  return x / y;
+}
+
+function isEven(number) {
+
+if (number % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+
+  return number % 2 === 0 ? true : false;
+}
+
+function isValidEmail(email) {
+  if (email.includes("@")) {
+    return true;
+  } else {
+    return false;
+  }
+
+}
+
+console.log(isValidEmail("Bro@fakecom"));
+console.log(isValidEmail("Elonmusk.com"));
+
+
+// Variable scope = where a variable is recognized
+// and accessible (local vs global)
+
+let x = 3;
+
+function1();
+
+function function1() {
+  let x = 1;
+  console.log(x);
+}
+
+function function2() {
+  let x = 2;
+  console.log(x);
+}
 */
