@@ -24,4 +24,87 @@
 #mySubmit {
   font-size: 1em;
 }
+
+// DICE PROGRAM
+
+#container {
+  font-size: 2rem;
+  text-align: center;
+}
+
+button {
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: aqua;
+}
+button:active {
+  background-color: lightblue;
+}
+
+input {
+  font-size: 2rem;
+  width: 150px;
+  text-align: center;
+  font-weight: bold;
+}
+
+img {
+  max-width: 100px;
+  max-height: 100px;
+}
 */
+
+h1 {
+  color: blue;
+}
+form {
+  background-color: white;
+  text-align: center;
+  max-width: 350px;
+  margin: auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px black;
+}
+
+#textBox {
+  width: 50%;
+  text-align: center;
+  font-size: 2em;
+  border: 2px solid black;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+button {
+  margin-top: 15px;
+  background-color: hsl(0, 100%, 60%);
+  color: white;
+  font-size: 1.5em;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: hsl(0, 100%, 50%);
+}
+
+#result {
+  font-size: 1.75em;
+  font-weight: bold;
+}

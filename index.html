@@ -59,6 +59,31 @@ CHECKBOXI TEEMAD
     <p id="subResult"></p>
     <p id="paymentResult"></p>
   -->
+
+    <!-- DICE ROLLER GAME 
+    <div id="container">
+      <h1>Dice Roller</h1>
+      <label># of dice:</label>
+      <input type="number" id="numDice" value="1" min="1" />
+      <button onclick="rollDice()">Roll Dice</button>
+      <div id="diceResult"></div>
+      <div id="diceImages"></div>
+    </div>
+ -->
+    <form>
+      <h1>Temperature conversion:</h1>
+      <input type="number" id="textBox" value="0" /><br />
+
+      <input type="radio" id="toFahrenheit" name="unit" />
+      <label for="toFahrenheit">Celsius to Fahrenheit</label><br />
+
+      <input type="radio" id="toCelsius" name="unit" />
+      <label for="toCelsius">Fahrenheit to Celsius</label><br />
+
+      <button type="button" onclick="convert()">submit</button>
+      <p id="result"></p>
+    </form>
+
     <script src="index.js"></script>
     <script src="index2.js"></script>
     <script src="script.js"></script>

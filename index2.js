@@ -494,4 +494,155 @@ function function2() {
   let x = 2;
   console.log(x);
 }
+
+// array = a variable like a structure that can hold more than 1 value
+
+
+
+let fruits = ["apple", "orange", "banana", "coconut"];
+
+fruits.sort().reverse();
+
+for (let fruit of fruits) {
+  console.log(fruit);
+}
+  
+// Array operator = ... allows an iterable such as an array or string to be expanded into seperate elements
+// (unpacks the elements)
+
+
+let numbers = [1, 2, 3, 4, 5];
+let maximum = Math.max(...numbers);
+let minimum = Math.min(...numbers);
+
+console.log(minimum);
+
+
+let username = "Bro code";
+let letters = [...username].join("-");
+
+console.log(letters);
+
+
+let fruits = ["apple", "orange", "banana"];
+let vegetables = ["carrots", "celery", "poratoes"];
+
+let foods = [...fruits, ...vegetables, "eggs", "milk"];
+
+console.log(foods);
+
+
+
+// Rest parameters= (...rest) allow a function work with a variable numbers of arguments
+// by bundling them into. an array
+// spread = expands an array into seperate elements
+// rest = bundles seperate elements into an array
+
+function openFridge(...foods) {
+  console.log(...foods);
+}
+function getFood(...foods) {
+  return foods;
+}
+const food1 = "pizza";
+const food2 = "hamburger";
+const food3 = "hotdog";
+const food4 = "sushi";
+const food5 = "ramen";
+
+//openFridge(food1, food2, food3, food4, food5);
+
+const foods = getFood(food1, food2, food3, food4, food5);
+
+console.log(foods);
+
+
+function sum(...numbers) {
+  let result = 0;
+  for (let number of numbers) {
+    result += number;
+  }
+  return result;
+}
+
+//const total = sum(1, 2, 3, 4, 5);
+//console.log(`Your total is $${total}`);
+
+function getAverage(...numbers) {
+  let result = 0;
+  for (let number of numbers) {
+    result += number;
+  }
+  return result / numbers.length;
+}
+
+const total = getAverage(85, 100, 85, 90, 50);
+
+console.log(total);
+
+
+function combineStrings(...strings) {
+  return strings.join(" ");
+}
+
+const fullName = combineStrings("Mr.", "Spongebob", "Squarepants", "III");
+
+console.log(fullName);
+
+
+
+        // DICE ROLLER GAME
+
+function rollDice() {
+  const numDice = document.getElementById("numDice").value;
+  const diceResult = document.getElementById("diceResult");
+  const diceImages = document.getElementById("diceImages");
+  const values = [];
+  const images = [];
+
+  for (let i = 0; i < numDice; i++) {
+    const value = Math.floor(Math.random() * 6) + 1;
+    values.push(value);
+    images.push(`<img src="assets/${value}.svg" alt="Dice ${value}">`);
+  }
+  diceResult.textContent = `dice: ${values.join(", ")}`;
+  diceImages.innerHTML = images.join("");
+}
+
+
+          // callback = a function that is passed as an argument to another function
+
+hello(wait);
+
+function hello(callback) {
+  console.log("Hello!");
+  callback();
+}
+
+function wait() {
+  console.log("Wait!");
+}
+
+function leave() {
+  console.log("Leave!");
+}
+
+function goodbye() {
+  console.log("Goodbye!");
+}
+
+
+sum(displayPage, 1, 2);
+
+function sum(callback, x, y) {
+  let result = x + y;
+  callback(result);
+}
+
+function displayConsole(result) {
+  console.log(result);
+}
+function displayPage(result) {
+  document.getElementById("myH1").textContent = result;
+}
 */
