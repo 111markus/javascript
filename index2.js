@@ -645,4 +645,177 @@ function displayConsole(result) {
 function displayPage(result) {
   document.getElementById("myH1").textContent = result;
 }
+
+
+
+    //          forEach() = method used to iterate over the elements of an array and apply a specified function (callback) to each element
+    
+    //          array.forEach(callback)
+    //          element, index, array are provided
+    
+
+let numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach(square);
+numbers.forEach(double);
+numbers.forEach(display);
+
+function double(element, index, array) {
+  array[index] = element * 2;
+}
+
+function triple(element, index, array) {
+  array[index] = element * 3;
+}
+
+function square(element, index, array) {
+  array[index] = Math.pow(element, 2);
+}
+
+function display(element) {
+  console.log(element);
+}
+ 
+
+let fruits = ["apple", "orange", "banana", "coconut"];
+
+fruits.forEach(capitalize);
+fruits.forEach(display);
+
+function upperCase(element, index, array) {
+  array[index] = element.toUpperCase();
+}
+
+function lowercase(element, index, array) {
+  array[index] = element.toLowerCase();
+}
+
+function capitalize(element, index, array) {
+  array[index] = element.charAt(0).toUpperCase() + element.trim().slice(1);
+}
+
+function display(element) {
+  console.log(element);
+}
+ 
+
+
+// .map() = accepts a callback and applies that function to each element of an array then returns a new array
+
+
+
+const numebrs = [1, 2, 3, 4, 5];
+const squares = numebrs.map(square);
+const cubes = numebrs.map(cube);
+
+console.log(squares);
+
+function square(element) {
+  return Math.pow(element, 2);
+}
+
+function cube(element) {
+  return Math.pow(element, 3);
+}
+
+
+const students = ["spongebob", "patrick", "squidward", "sandy"];
+const studentsUpper = students.map(upperCase);
+const studentsLower = students.map(lowerCase);
+
+console.log(studentsLower);
+
+function upperCase(element) {
+  return element.toUpperCase();
+}
+
+function lowerCase(element) {
+  return element.toLowerCase();
+}
+
+
+const dates = ["2024-1-10", "2025-2-20", "2026-3-30"];
+const formattedDates = dates.map(formatDates);
+
+console.log(formattedDates);
+
+function formatDates(element) {
+  const parts = element.split("-");
+  return `${parts[2]}.${parts[1]}.${parts[0]}`;
+}
+
+
+//        .filter() = creates a new array by filtering out elements
+
+
+let numbers = [1, 2, 3, 4, 5, 6, 7];
+let evenNums = numbers.filter(isEven);
+let oddNums = numbers.filter(isOdd);
+
+console.log(evenNums);
+console.log(oddNums);
+
+function isEven(element) {
+  return element % 2 === 0;
+}
+
+function isOdd(element) {
+  return element % 2 !== 0;
+}
+
+const ages = [16, 17, 18, 18, 19, 20, 60];
+let adults = ages.filter(isAdult);
+let children = ages.filter(isChild);
+
+console.log(adults);
+console.log(children);
+
+function isAdult(element) {
+  return element >= 18;
+}
+
+function isChild(element) {
+  return element < 18;
+}
+
+
+
+const fruits = ["apple", "orange", "banana", "coconut", "pomegranate"];
+const shortw = fruits.filter(getShortWords);
+const longw = fruits.filter(getLongWords);
+
+console.log(shortw);
+console.log(longw);
+
+function getShortWords(element) {
+  return element.length <= 6;
+}
+
+function getLongWords(element) {
+  return element.length > 6;
+}
+
+
+        // .reduce() = reduce the elements of an array to a single value
+
+
+const prices = [5, 30, 100, 25, 15, 20];
+
+const total = prices.reduce(sum);
+
+console.log(`$${total.toFixed(2)}`);
+
+function sum(accumulator, element) {
+  return accumulator + element;
+}
 */
+
+const grades = [75, 50, 90, 80, 65, 95];
+
+const maximum = grades.reduce(getMax);
+
+console.log(maximum);
+
+function getMax(accumulator, element) {
+  return Math.max(accumulator, element);
+}
