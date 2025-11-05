@@ -808,7 +808,7 @@ console.log(`$${total.toFixed(2)}`);
 function sum(accumulator, element) {
   return accumulator + element;
 }
-*/
+
 
 const grades = [75, 50, 90, 80, 65, 95];
 
@@ -819,3 +819,75 @@ console.log(maximum);
 function getMax(accumulator, element) {
   return Math.max(accumulator, element);
 }
+
+
+    // function declaration = define a reusable block of code that performs a specific task
+
+function hello(){
+  console.log("Hello");
+}
+ 
+
+const numbers = [1, 2, 3, 4, 5, 6];
+const squares = numbers.map(function (element) {
+  return Math.pow(element, 2);
+});
+
+const evenNums = numbers.filter(function (element) {
+  return element % 2 === 0;
+});
+
+
+
+console.log(squares);
+console.log(evenNums);
+
+
+   // function expressions = a way to define a function as values or variables
+
+
+const hello = function (){
+  console.log("Hello");
+}
+
+hello();
+
+//
+
+
+setTimeout(function () {
+  console.log("Hello");
+}, 3000);
+
+
+// arrow functions = a concise way to write function expressions
+// good for simple functions that you use only once
+// (parameters) => some code
+
+const hello = (name, age) => {
+  console.log(`Hello ${name}`);
+  console.log(`You are ${age} old`);
+};
+
+hello("bro", 30);
+
+
+
+setTimeout(hello, 3000);
+
+function hello() {
+  console.log("Hello");
+}
+
+setTimeout(() => console.log("Hello"), 3000); // lühem viis
+
+
+
+
+// lühem viis varasemasest
+const numbers = [1, 2, 3, 4, 5, 6];
+
+const squares = numbers.map((element) => Math.pow(element, 2));
+
+console.log(squares);
+*/
