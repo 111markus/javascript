@@ -22,4 +22,36 @@ function renderScores() {
     item.textContent = score;
     scoreList.appendChild(item);
   });
+  kpiCount.textContent = currentScores.length;
+}
+
+// punktide lisamine
+
+function addBonus() {
+  const newScores = currentScores.map((score) => score + 5);
+  currentScores = newScores;
+  renderScores();
+}
+
+// filtreeri 60 või suurem
+
+function filterByThreshold() {
+  const filtered = currentScores.filter((score) => score >= 60);
+  currentScores = filtered;
+  renderScores();
+}
+
+// arvuta keskmine (VIGANE VEEL)
+
+function showAverage() {
+  if (currentScores.length === 0) {
+    kpiAvg.textContent = "–";
+    return;
+  }
+
+  const sum = currentScores.reduce((acc, score) => acc + score, 0);
+  const average = sum / currentScores.length;
+
+  // uuenda keskmise väljundit HTML-is
+  kpiAvg.textContent = average.toFixed(2);
 }
