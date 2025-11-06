@@ -54,4 +54,62 @@ function convert() {
   }
 }
 
+
+
+
+/// TOIDUKORVI ANALÜÜS
+
+let shoppingCart = [
+  { name: "apple", quantity: 4 },
+  { name: "banana", quantity: 2 },
+  { name: "orange", quantity: 5 },
+  { name: "milk", quantity: 1 },
+  { name: "bread", quantity: 2 },
+];
+
+// arvutan kogusumma
+
+let total = shoppingCart.reduce((sum, item) => sum + item.quantity, 0);
+
+console.log("Kokku:", total);
+
+// lisan jogurti
+
+shoppingCart.push({ name: "yogurt", quantity: 3 });
+
+// lisan õunad
+
+let apple = shoppingCart.find((item) => item.name === "apple");
+
+if (apple) {
+  apple.quantity += 3;
+} else {
+  shoppingCart.push({ name: "apple", quantity: 3 });
+}
+
+// eemaldan banaani
+
+shoppingCart = shoppingCart.filter((item) => item.name !== "banana");
+
+// koostan nimekirja
+
+let nimekiri = shoppingCart.map((item) => item.name);
+console.log(nimekiri);
+
+// kas milk on olemas?
+
+let milk = shoppingCart.find((item) => item.name === "milk");
+
+if (milk.quantity >= 1) {
+  milk = true;
+} else {
+  milk = false;
+}
+console.log("Kas milk on:", milk);
+
+// sorteerin kahanevas järjekorras
+
+shoppingCart.sort((a, b) => b.quantity - a.quantity);
+console.log("Lõpptulemus:", shoppingCart);
+
 */

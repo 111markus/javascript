@@ -890,4 +890,80 @@ const numbers = [1, 2, 3, 4, 5, 6];
 const squares = numbers.map((element) => Math.pow(element, 2));
 
 console.log(squares);
+
+
+// object - a collection of related properties and/or methods, Can present real world objects
+// (people, products, places)
+// object - {key:value, function()}
+
+const person1 = {
+  firstName: "Spongebob",
+  lastName: "Squarepants",
+  age: 30,
+  isEmployed: true,
+  sayHello: function () {
+    console.log("Hi! I am Spongebob");
+  },
+  eat: function () {
+    console.log("I am eating a Krabby Patty");
+  },
+};
+
+const person2 = {
+  firstName: "Patrick",
+  lastName: "Star",
+  age: 42,
+  isEmployed: false,
+  sayHello: function () {
+    console.log("Hey! I am Patrick");
+  },
+  eat: function () {
+    console.log("I am eating a Pizza");
+  },
+};
+
+console.log(person1.firstName);
+console.log(person1.lastName);
+console.log(person1.age);
+console.log(person1.isEmployed);
+person1.eat();
+
+console.log(
+  person2.firstName,
+  person2.lastName,
+  person2.age,
+  person2.isEmployed
+);
+person2.eat();
+
+
+
+const person1 = {
+  name: "Spongebob",
+  favFood: "Hamburger",
+  sayHello: function () {
+    console.log(`Hi! I am ${this.name}`);
+  },
+  eat: function () {
+    console.log(`${this.name} is eating ${this.favFood}`);
+  },
+};
+
+person1.eat();
+
+
+          // MEETODID
+reduce() – kogusumma leidmiseks
+
+push() – uue toote lisamiseks
+
+find() – konkreetse toote otsimiseks
+
+filter() – toote eemaldamiseks
+
+map() – ainult nimede väljastamiseks
+
+some() – kontrollimiseks, kas toode on olemas
+
+sort() – sorteerimiseks koguse järgi
 */
