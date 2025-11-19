@@ -41,7 +41,7 @@ function filterByThreshold() {
   renderScores();
 }
 
-// arvuta keskmine (VIGANE VEEL)
+// arvuta keskmine
 
 function showAverage() {
   if (currentScores.length === 0) {
@@ -52,6 +52,29 @@ function showAverage() {
   const sum = currentScores.reduce((acc, score) => acc + score, 0);
   const average = sum / currentScores.length;
 
-  // uuenda keskmise väljundit HTML-is
   kpiAvg.textContent = average.toFixed(2);
+}
+
+// taasta algseis
+
+function resetAll() {
+  currentScores = [...scores];
+  renderScores(currentScores);
+  kpiAvg.textContent = "–";
+}
+
+// genereeri uued skoorid ja kuva
+
+function makeRandom() {
+  const count = Number(countInput.value);
+
+  const makeRandomScores = Array.from(
+    { length: count },
+    () => Math.floor(Math.random() * 100) + 1
+  );
+
+  currentScores = makeRandomScores;
+
+  renderScores();
+  kpiAvg.textContent = "–";
 }
