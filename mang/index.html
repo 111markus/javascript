@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="et">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kangelaste meeskond</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Kangelaste meeskond</h1>
+    </header>
+
+    <main>
+      <!-- Vasakul: nupud ja vihjed -->
+      <section class="panel">
+        <h2>Missioonid</h2>
+        <div class="controls">
+          <button class="primary" onclick="showAllHeroes()">
+            Näita kõiki kangelasi
+          </button>
+
+          <div class="row">
+            <label for="roleSelect"> Näita rolli järgi:</label>
+            <select id="roleSelect" onchange="filterByRole()">
+              <option value="all">Kõik rollid</option>
+              <option value="tank">Tank</option>
+              <option value="raviarst">Raviarst</option>
+              <option value="ründaja">Ründaja</option>
+            </select>
+          </div>
+
+          <button onclick="boostTeam()">Lisa kõigile +10 elupunkti</button>
+          <button onclick="showTeamPower()">Arvuta meeskonna kogujõud</button>
+          <button onclick="resetTeam()">🔁 Taasta algne meeskond</button>
+
+          <button onclick="attackBoss()">
+            Ründa bossi (kõik ründajad teevad kahju)
+          </button>
+          <button onclick="healTanks()">
+            Raviarstid ravivad tanke (+15 hp tankidele)
+          </button>
+        </div>
+      </section>
+
+      <!-- Paremal: meeskonna vaade + boss + logi -->
+      <section class="panel">
+        <h2>Meeskonna ja bossi vaade</h2>
+        <div class="inner">
+          <div class="stats">
+            <div class="card">
+              <div class="label">Kangelasi</div>
+              <div class="value" id="heroCount">0</div>
+            </div>
+            <div class="card">
+              <div class="label">Meeskonna kogujõud</div>
+              <div class="value" id="teamPower">0</div>
+            </div>
+          </div>
+
+          <div class="boss">
+            <div class="boss-header">
+              <span class="boss-name" id="bossName">Varju-Boss</span>
+              <span class="boss-hp" id="bossHp">HP: 200</span>
+            </div>
+            <div class="boss-bar">
+              <div
+                class="boss-bar-inner"
+                id="bossBarInner"
+                style="width: 100%"
+              ></div>
+            </div>
+          </div>
+
+          <div id="heroList" class="heroes">
+            <!-- siia renderdab JS kangelaste kaardid -->
+          </div>
+
+          <div class="log" id="log">
+            <!-- siia lisab JS logiridu -->
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
