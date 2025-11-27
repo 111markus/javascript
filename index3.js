@@ -181,7 +181,8 @@ const rectangle = new Rectangle(3, 4);
 console.log(rectangle.width);
 console.log(rectangle.height);
 console.log(rectangle.area);
-*/
+
+//
 
 class Person {
   constructor(firstName, lastName, age) {
@@ -218,3 +219,164 @@ class Person {
 const person = new Person("tere", "tere2", 124);
 
 console.log(person);
+
+
+//destructuring = extract values form arrays and objects, then assign them to variables in a convenient way
+
+// {} = to perform object destructuring
+// [] = to perform array destructuring
+
+let a = 1;
+let b = 2;
+
+[a, b] = [b, a];
+
+console.log(a);
+console.log(b);
+
+//
+
+const colors = ["red", "green", "blue", "black", "white"];
+
+const [firstColor, secondColor, thirdColor, ...extraColors] = colors;
+
+console.log(firstColor);
+console.log(secondColor);
+console.log(thirdColor);
+console.log(extraColors);
+
+
+//EXTRACT VALUES FROM OBJECTS
+
+function displayPerson({ firstname, lastname, age, job }) {
+  console.log(`name:${firstname}${lastname}`);
+  console.log(`age ${age}`);
+  console.log(`job ${job}`);
+}
+
+const person1 = {
+  firstname: "spongebob",
+  lastname: "squarepants",
+  age: 30,
+  job: "Fry cook",
+};
+
+const person2 = {
+  firstname: "patrick",
+  lastname: "star",
+  age: 34,
+};
+
+const { firstname, lastname, age, job = "unemployed" } = person1;
+
+console.log(firstname);
+console.log(lastname);
+console.log(age);
+console.log(job);
+
+
+// nested objects = objects inside of other objects. Child object is enclosed by a parent objects
+
+// Person{Address{}, ContactInfo{}}
+// ShoppingCart{keyboard{}, mouse{}, monitor{}}
+
+// MASSIIVI SEEST VÄÄRTUSE VÕTMINE
+
+const person = {
+  fullname: "spongebob squarepants",
+  age: 30,
+  isStudent: true,
+  hobbies: ["karate", "jellyfishing", "cooking"],
+  address: {
+    street: "124 Conch St.",
+    city: "Bikini Bottom",
+    Country: "Int. Water",
+  },
+};
+
+for (const property in person.address) {
+  console.log(person.address[property]);
+} // annab kogu aadressi
+
+console.log(person.fullname);
+console.log(person.age);
+console.log(person.isStudent);
+console.log(person.hobbies[2]);
+console.log(person.address.street);
+
+
+
+class person {
+  constructor(name, age, ...address) {
+    this.name = name;
+    this.age = age;
+    this.address = new Address(...address);
+  }
+}
+
+class Address {
+  constructor(street, city, country) {
+    this.street = street;
+    this.city = city;
+    this.country = country;
+  }
+}
+
+const person1 = new person(
+  "Spongebob",
+  30,
+  "124 Conch St",
+  "Bikini Bottom",
+  "Int. Waters"
+);
+
+const person2 = new person(
+  "Patrick",
+  37,
+  "128 Conch St",
+  "Bikini Bottom",
+  "Int. Waters"
+);
+
+const person3 = new person(
+  "Squidward",
+  45,
+  "126 Conch St",
+  "Bikini Bottom",
+  "Int. Waters"
+);
+
+console.log(person3.address.city);   
+
+
+///////
+
+const fruits = [
+  { name: "apple", color: "red", calories: 95 },
+  { name: "orange", color: "orange", calories: 45 },
+  { name: "banana", color: "yellow", calories: 105 },
+  { name: "coconut", color: "white", calories: 159 },
+  { name: "pineapple", color: "yellow", calories: 37 },
+];
+
+const maxFruit = fruits.reduce((max, fruit) =>
+  fruit.calories > max.calories ? fruit : max
+);
+
+const minFruit = fruits.reduce((min, fruit) =>
+  fruit.calories < min.calories ? fruit : min
+);
+
+console.log(maxFruit);
+console.log(minFruit);
+//filter
+
+const yellowFruits = fruits.filter((fruit) => fruit.color === "yellow");
+const lowCalFruits = fruits.filter((fruit) => fruit.calories < 100);
+console.log(yellowFruits);
+console.log(lowCalFruits);
+
+ fruits.push({ name: "grapes", color: "purple", calories: 62 });
+
+console.log(fruits);
+*/
