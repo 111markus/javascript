@@ -379,4 +379,56 @@ console.log(lowCalFruits);
  fruits.push({ name: "grapes", color: "purple", calories: 62 });
 
 console.log(fruits);
+
+
+// SHOW JA HIDE PILT NUPUGA
+
+const myButton = document.getElementById("myButton");
+const myImg = document.getElementById("myImg");
+
+myButton.addEventListener("click", (event) => {
+  if (myImg.style.visibility === "hidden") {
+    myImg.style.visibility = "visible";
+    myButton.textContent = "Hide";
+  } else {
+    myImg.style.visibility = "hidden";
+    myButton.textContent = "Show";
+  }
+});
 */
+
+// NodeList = Static collection of HTML elements by (id, class, element).
+// Can be Created by using querySelectorAll()
+
+let buttons = document.querySelectorAll(".myButtons");
+
+// ADD HTML/CSS PROPERTIES
+
+/* buttons.forEach((button) => {
+  button.style.backgroundColor = "green";
+  button.textContent += ":)";
+});
+
+// CLICK event listener
+
+buttons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.target.style.backgroundColor = "tomato"; // target on siin button, nuppu vajutades muutub nupp punaseks
+  });
+});
+
+// MOUSEOVER + MOUSEOUT event listener
+
+buttons.forEach((button) => {
+  button.addEventListener("mouseout", (event) => {
+    event.target.style.backgroundColor = "tomato"; // target on siin button, nuppu pealt ära liikudes muutub punaseks 
+  });
+});
+*/
+
+// ADD AN ELEMENT
+
+const newButton = document.createElement("button"); //STEP 1
+newButton.textContent = "Button 5"; //STEP 2
+newButton.classList = "myButtons"; // lisab klassi
+document.body.appendChild(newButton); //STEP 3

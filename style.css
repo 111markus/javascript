@@ -109,3 +109,13 @@ button:hover {
   font-weight: bold;
 }
 */
+
+.myButtons {
+  fontsize: 4rem;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background-color: lightblue;
+  color: white;
+}
