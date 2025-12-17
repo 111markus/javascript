@@ -395,7 +395,7 @@ myButton.addEventListener("click", (event) => {
     myButton.textContent = "Show";
   }
 });
-*/
+
 
 // NodeList = Static collection of HTML elements by (id, class, element).
 // Can be Created by using querySelectorAll()
@@ -404,7 +404,7 @@ let buttons = document.querySelectorAll(".myButtons");
 
 // ADD HTML/CSS PROPERTIES
 
-/* buttons.forEach((button) => {
+ buttons.forEach((button) => {
   button.style.backgroundColor = "green";
   button.textContent += ":)";
 });
@@ -424,7 +424,7 @@ buttons.forEach((button) => {
     event.target.style.backgroundColor = "tomato"; // target on siin button, nuppu pealt ära liikudes muutub punaseks 
   });
 });
-*/
+
 
 // ADD AN ELEMENT
 
@@ -432,3 +432,59 @@ const newButton = document.createElement("button"); //STEP 1
 newButton.textContent = "Button 5"; //STEP 2
 newButton.classList = "myButtons"; // lisab klassi
 document.body.appendChild(newButton); //STEP 3
+
+
+
+// classList = element property in javascript used to interact with an elements list of classes (CSS classes)
+// Allows you to make reusable classes for many elements
+
+const myButton = document.getElementById("myButton");
+
+myButton.addEventListener("mouseover", (event) => {
+  event.target.classList.add("hover"); // kui hiir on nupu peal stiil muutub
+});
+
+myButton.addEventListener("mouseout", (event) => {
+  event.target.classList.remove("hover"); // kui hiire ära votan  muutus kaob
+});
+
+myButton.classList.add("enabled");
+
+myButton.addEventListener("click", (event) => {
+  if (event.target.classList.replace("enabled", "disabled")) {
+    event.target.textContent += ":)";
+  } else {
+    event.target.classList.replace("enabled", "disabled");
+  }
+});
+
+
+
+let buttons = document.querySelectorAll(".myButtons");
+
+buttons.forEach((button) => {
+  button.classList.add("enabled");
+});
+
+buttons.forEach((button) => {
+  button.addEventListener("mouseover", (event) => {
+    event.target.classList.toggle("hover");
+  });
+});
+
+buttons.forEach((button) => {
+  button.addEventListener("mouseout", (event) => {
+    event.target.classList.toggle("hover");
+  });
+});
+
+buttons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    if (event.target.classList.contains("disabled")) {
+      event.target.textcontent += ":)";
+    }
+
+    event.target.classList.replace("enabled", "disabled");
+  });
+});
+*/
